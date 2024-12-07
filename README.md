@@ -9,8 +9,8 @@
 ![Rust](https://img.shields.io/badge/-Rust-000?&logo=Rust)
 <br/>
 ![FastAPI](https://img.shields.io/badge/-FastAPI-000?&logo=fastapi)
-[![](https://img.shields.io/badge/-🌠_NextJS-000)](https://nextjs.org)
-[![](https://img.shields.io/badge/-🐂_Tauri-000)](https://tauri.app/)
+![NextJS](https://img.shields.io/badge/-NextJS-000?&logo=nextdotjs)
+![Tauri](https://img.shields.io/badge/-Tauri-000?&logo=Tauri)
 
 A native app built with Tauri version 1 that spawns a Python sub-process (sidecar) which starts a FastAPI server.
 
