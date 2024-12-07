@@ -1,76 +1,63 @@
-# Example Tauri App using a Python server
+# Example Tauri v1 app using Python sidecar
 
-A native web-app using the Tauri framework that spawns a subprocess for a backend server (FastAPI).
+<div style="padding: 0.5rem; margin-bottom: 1rem; font-weight: bold; background-color: #fab005; color: black; width: 100%; height: auto; text-align: center;"><marquee>👀 🚨 Attention 🚨 👀</marquee> <br/>Tauri v2 example is now available:<br/><a href="https://github.com/dieharders/example-tauri-v2-python-server-sidecar" style="color: #228be6">example-tauri-v2-python-server-sidecar</a>
+<p style="font-weight: normal">More features, build scripts, examples and documentation.</p></div>
 
----
+A native app built with Tauri version 1 that spawns a Python sub-process (sidecar) which starts a FastAPI server.
+
+![logo](extras/sidecar-logo.png "python sidecar logo")
 
 ## Introduction
 
-This is a hybrid Next.js + Python app that uses Next.js as the frontend and FastAPI as the API backend.
-
-It is intended to show how to build hybrid language apps that work locally on a client's computer.
-
-We do this to package up dependencies to make installation easier on the user and to allow the front-end access to the OS's disk, camera, and other native hardware features.
-
-We make use of PyInstaller to compile binaries of all our code so that the user doesn't have to worry about installing dependencies. Tauri accomplishes this interoperability with what it calls "sidecars" which you can use to "load" in some arbitrary runtime. This is defined in the `tauri.conf.json` file. See [here](https://tauri.app/v1/guides/building/sidecar/) for more info.
-
-Unfortunately this is done through Rust which some (including myself) are not familiar. Therefore, after many a visit to StackOverflow I created this example project in case others or myself ever need to jump-start a new native app.
-
----
+This example app uses Next.js as the frontend and Python (FastAPI) as the backend. Tauri is a Rust framework that orchestrates the frontend and backend(s) into a native app experience.
 
 ## How It Works
 
-- Tauri takes your front-end UI written in javascript (or Next.js framework in this case) and creates a native webview to display it. This makes the file size much smaller.
+![python sidecar architecture](extras/diagram.png "python sidecar architecture")
 
-- In `main.rs` we spawn a `main.py` script which creates our api server on `localhost:8008` and can be used to spawn any other binaries or python code you like.
-
-- Most importantly, when the user closes the GUI window, all processes and subprocesses are shutdown properly.
-
-- 3rd party client apps could use this api to perform any functions needed. Use it to run ai inference, offload intensive tasks, manually kick-off or orchestrate processes.
-
----
+Tauri takes your frontend UI written in html/javascript and displays it in a native webview. This makes the resulting file size smaller since it does not need to include a web browser.
 
 ## Getting Started
 
 ### Dependencies
 
-First, install the dependencies for javascript:
+Install dependencies for javascript:
 
 ```bash
 pnpm install
 ```
 
-Install dependencies for python listed in your requirements.txt file:
+To install python dependencies listed in requirements.txt:
 
-Be sure to run this command with admin privileges. This command is optional and is also run on each `pnpm dev`.
-
+```bash
+pnpm dev-reqs
 ```
-pip install -r requirements.txt
+
+In case you dont have PyInstaller installed:
+
+```bash
+pip install -U pyinstaller
 ```
 
 ### Run
 
-Then, run the app in development mode:
+To run the app in development mode with hot-reload (js):
 
 ```bash
 pnpm tauri dev
 ```
 
----
-
 ### Build
 
-In case you dont have PyInstaller installed:
+#### Compile python sidecar
 
+Run this at least once before running `pnpm tauri dev` and each time you make changes to your python code. This command is also called by `pnpm tauri build`:
+
+```bash
+pnpm build:fastapi
 ```
-pip install -U pyinstaller
-```
 
-A note on compiling Python exe (the -F flag bundles everything into one .exe). You won't need to run this manually each build, I have included it in the build scripts.
-
-- `pyinstaller -c -F your_program.py`
-
-Build app for production:
+#### Build app for production:
 
 ```
 pnpm tauri build
@@ -80,10 +67,9 @@ This creates an installer located here:
 
 - \<project-dir>\src-tauri\target\release\bundle\nsis
 
----
-
 ## Learn More
 
 - [Tauri Framework](https://tauri.app/) - learn about native app development in javascript and rust.
-- [FastAPI Documentation](https://fastapi.tiangolo.com/) - learn about FastAPI features and API.
+- [NextJS](https://nextjs.org/docs) - learn about the popular react framework Next.js
+- [FastAPI](https://fastapi.tiangolo.com/) - learn about FastAPI server features and API.
 - [PyInstaller](https://pyinstaller.org/en/stable/) - learn about packaging python code.

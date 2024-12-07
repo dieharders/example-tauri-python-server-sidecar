@@ -1,5 +1,5 @@
 {
-  "name": "ai-knowledgebase-backend",
+  "name": "example-tauri-v1-python-server-sidecar",
   "version": "0.1.0",
   "private": true,
   "scripts": {
