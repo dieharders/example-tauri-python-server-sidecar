@@ -3,7 +3,6 @@
 A native app built with Tauri v1 that spawns a Python sub-process (sidecar) which starts a FastAPI server.
 
 ![Python](https://img.shields.io/badge/-Python-000?&logo=Python)
-![JavaScript](https://img.shields.io/badge/-JavaScript-000?&logo=JavaScript)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-000?&logo=TypeScript)
 ![Rust](https://img.shields.io/badge/-Rust-000?&logo=Rust)
 <br>
@@ -13,10 +12,10 @@ A native app built with Tauri v1 that spawns a Python sub-process (sidecar) whic
 
 > [!IMPORTANT]
 >
-> <h2>🚨 Attention 🚨</h2>
-> <h3>Tauri v2 example is now available:
-> <a href="https://github.com/dieharders/example-tauri-v2-python-server-sidecar" style="color: #228be6">example-tauri-v2-python-server-sidecar</a></h3>
-> <h4>More features, build scripts, examples and documentation.</h4>
+> <strong>🚨 Attention 🚨</strong>
+> Tauri v2 example is now available: <a href="https://github.com/dieharders/example-tauri-v2-python-server-sidecar" style="color: #228be6">example-tauri-v2-python-server-sidecar</a>
+>
+> More features and documentation plus downloadable app.
 
 <!-- <h2 align="center" style="padding: 0.5rem; margin-bottom: 1rem; font-weight: bold; background-color: #fab005; color: black; width: 100%; height: auto; text-align: center;">👀 🚨 Attention 🚨 👀<br/>Tauri v2 example is now available:<br/><a href="https://github.com/dieharders/example-tauri-v2-python-server-sidecar" style="color: #228be6">example-tauri-v2-python-server-sidecar</a>
 <p style="font-weight: normal">More features, build scripts, examples and documentation.</p></h2> -->
