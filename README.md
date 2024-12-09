@@ -13,9 +13,12 @@ A native app built with Tauri v1 that spawns a Python sub-process (sidecar) whic
 > [!IMPORTANT]
 >
 > <strong>🚨 Attention 🚨</strong>
-> Tauri v2 example is now available: <a href="https://github.com/dieharders/example-tauri-v2-python-server-sidecar" style="color: #228be6">example-tauri-v2-python-server-sidecar</a>
 >
-> More features and documentation plus downloadable app.
+> Tauri v2 example is now available 👇
+>
+> <a href="https://github.com/dieharders/example-tauri-v2-python-server-sidecar" style="color: #228be6">example-tauri-v2-python-server-sidecar</a>
+>
+> More features and documentation with example app.exe.
 
 <!-- <h2 align="center" style="padding: 0.5rem; margin-bottom: 1rem; font-weight: bold; background-color: #fab005; color: black; width: 100%; height: auto; text-align: center;">👀 🚨 Attention 🚨 👀<br/>Tauri v2 example is now available:<br/><a href="https://github.com/dieharders/example-tauri-v2-python-server-sidecar" style="color: #228be6">example-tauri-v2-python-server-sidecar</a>
 <p style="font-weight: normal">More features, build scripts, examples and documentation.</p></h2> -->
